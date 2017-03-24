@@ -1,0 +1,33 @@
+<div>
+    <div class="categoryHolder">
+        <input type="button" value="any" onclick="displayCategory('any')">
+        <input type="button" value="miscellaneous" onclick="displayCategory('miscellaneous')">
+        <input type="button" value="vehicle" onclick="displayCategory('vehicle')">
+        <input type="button" value="appartment" onclick="displayCategory('appartment')">
+        <input type="button" value="sport" onclick="displayCategory('sport')">
+        <input type="button" value="clothing" onclick="displayCategory('clothing')">
+        <input type="button" value="textbook" onclick="displayCategory('textbook')">
+        <input type="button" value="furniture" onclick="displayCategory('furniture')">
+        <input type="button" value="electronic" onclick="displayCategory('electronic')">
+    </div>
+    <hr>
+</div>
+<div id="itemWrapperTemplate" style="display:none">
+    <!-- <div id="itemWrapperTemplate" > -->
+    <div class="itemWrapper">
+        <span class="title">title</span> <br>
+        <img class="img1" src="" height="200" width="auto" alt="Image preview..."> <br>
+        <span class="price">0</span>CA$ <br>
+        <span class="owner">owner</span><br>
+        <span class="description"></span> <br>
+        <span class="auction">
+			End Date : <span class="date"></span> <br>
+        <input type="number"  value='78' name="price" min="0" class="newPrice"> CA$
+        </span>
+        <input id='buyButton' type="button" value="Make Offer" name="someID" class="bid" onclick="bid(this)">
+        <hr>
+    </div>
+</div>
+<div class="itemHolder">
+</div>
+<input type="button" value="Load More" name="at item" class="loadMoreButton" onclick="displayItems(15)">

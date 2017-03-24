@@ -1,0 +1,19 @@
+body {
+    background-color: grey;
+    /*display: inline-block;*/
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+.preLogin {}
+
+.nav .postLogin {
+    display: none;
+}
+
+#Invalid_Credential_Input {
+    display: none;
+}

@@ -1,0 +1,13 @@
+#myFixedItemHolder .title {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+#myFixedItemHolder .itemWrapper {
+    position: relative;
+}
+
+#myFixedItemHolder .price {
+    font-size: 2em;
+    /*float: right;*/
+}

@@ -1,0 +1,53 @@
+<a href="#New_Sale"><button >
+	Put a new item on sale
+</button></a>
+<hr>
+<button onclick="loadMyItems()">Refresh</button>
+<button onclick="moneyEarned()"> View accumulated gain</button>
+<hr>
+<div id="myFixedItemHolder" style="display:block">
+</div>
+<div id="itemWrapperTemplate" style="display:none">
+    <div class="itemWrapper">
+        <span id="title-id" class="title"></span>
+		<input type="button" value="Edit Title" name="someID" class="bid" onclick="editTitle(this)"> <br>
+        <img class="img1" src="" height="200" width="auto" alt="Image preview..."> <br>
+        <span id="price-id" class="price"></span> Category : <span class="category"></span> <br> Description <span id="description-id" class="description"></span> <br>
+        <span class="auction">
+		End Date : <span class="date"></span> <br> Buyer : <span class="buyer">none</span>
+        </span>
+        <br>
+		<input type="button" value="Edit Price" name="someID" class="bid" onclick="editPrice(this)">
+		<input type="button" value="Edit Description" name="someID" class="bid" onclick="editDescription(this)"> <br>
+        <input type="button" value="Edit Sale" name="someID" class="bid" onclick="beginEditingSale(this)">
+        <br>
+        <input type="button" value="Remove Sale" name="someID" class="bid" onclick="removeMySale(this)">
+        <input type="button" value="view buyers" name="someID" class="bid" onclick="viewBuyers(this)">
+        <input type="button" value="Mark as sold" name="someID" class="bid soldButton" onclick="markSold(this)">
+        <p class="msg" style="color: red;"></p>
+        <hr>
+    </div>
+</div>
+<form id="updateSaleForm" style="display:none" name="someID">
+    <input id="itemTitle" type="text" name="title" placeholder="Item Title" class="title" value=""><br> PRICE: <input id="itemPrice" type="number" name="price" min="0" class="price" value=""> CA$<br>
+    <textarea id="itemDescription" rows="4" cols="50" placeholder="Item Description" class="description"></textarea><br>
+    <input id="upload-input" type="file" accept=".jpg,.jpeg,.png" placeholder="Item Image" name="uploads[]"><br>
+    <select name="category">
+		<option value="miscellaneous">miscellaneous</option>
+		<option value="appartment">appartment</option>
+		<option value="sport">sport</option>
+		<option value="vehicle">vehicle</option>
+		<option value="clothing">clothing</option>
+		<option value="furniture">furniture</option>
+		<option value="textbook">textbook</option>
+		<option value="electronic">electronic</option>
+	</select>
+    <div id="radioHolder" onclick="checkType()">
+        <input type="radio" name="type" value="fixed" class="type" checked> Fixed Price
+        <input type="radio" name="type" class="type" id="auctionRadio" value="auction"> Best Offer<br><br>
+    </div>
+    <div class="date" style="display:none">Enter the date at will the auction will end and the item will be sold</div>
+    <input type="date" name="date" class="date" style="display:none"> <br>
+    <hr>
+    <input id="confirmEdit" type="button" value="Update Sale" name="someID" class="bid" onclick="updateMySale(this)"> <br>
+</form>
